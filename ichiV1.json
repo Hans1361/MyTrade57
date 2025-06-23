@@ -1,0 +1,34 @@
+{
+  "strategy_name": "ichiV1",
+  "params": {
+    "trailing": {
+      "trailing_stop": false,
+      "trailing_stop_positive": null,
+      "trailing_stop_positive_offset": 0.0,
+      "trailing_only_offset_is_reached": false
+    },
+    "max_open_trades": {
+      "max_open_trades": 10
+    },
+    "buy": {
+      "buy_min_fan_magnitude_gain": 1.0085,
+      "buy_trend_above_senkou_level": 6,
+      "buy_trend_bullish_level": 2
+    },
+    "sell": {
+      "sell_trend_indicator": "trend_close_5m"
+    },
+    "protection": {},
+    "roi": {
+      "0": 0.07999999999999999,
+      "39": 0.037,
+      "70": 0.015,
+      "426": 0
+    },
+    "stoploss": {
+      "stoploss": -0.12
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2025-06-23 13:46:39.647703+00:00"
+}
