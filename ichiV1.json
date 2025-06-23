@@ -1,17 +1,11 @@
 {
-    "max_open_trades": 10,
-    "stake_currency": "USDT",
-    "stake_amount": 100,
-    "dry_run": true,
-    "dry_run_wallet": 1000,
-    "exchange": {
-        "name": "binance",
-        "key": "",
-        "secret": "",
-        "ccxt_config": {},
-        "ccxt_async_config": {},
-        "pair_whitelist": [
-            "BTC/USDT",
+  "strategy": "ichiV1",
+  "exchange": {
+    "name": "binance",
+    "ccxt_config": {},
+    "ccxt_async_config": {},
+    "pair_whitelist": [
+      "BTC/USDT",
             "ETH/USDT",
             "SOL/USDT",
             "XRP/USDT",
@@ -41,63 +35,35 @@
             "DOT/USDT",
             "HBAR/USDT",
             "WBTC/USDT"
-        ]
-    },
-    "pairlists": [
-        {
-            "method": "StaticPairList"
-        }
     ],
-    "edge": {
-        "enabled": false,
-        "process_throttle_secs": 3600,
-        "calculate_since_number_of_days": 7,
-        "allowed_risk": 0.01,
-        "stoploss_range_min": -0.01,
-        "stoploss_range_max": -0.1,
-        "stoploss_range_step": -0.01,
-        "minimum_winrate": 0.6,
-        "minimum_expectancy": 0.2,
-        "min_trade_number": 10,
-        "max_trade_duration_minute": 1440,
-        "remove_pumps": false
-    },
-    "amend_last_stake_amount": true,
-    "initial_state": "running",
-    "bot_name": "freqtrade",
-    "db_url": "sqlite:///user_data/tradesv3.sqlite",
-    "logfile": "user_data/logs/freqtrade.log",
-    "telegram": {
-        "enabled": true,
-        "token": "7229934882:AAGxzgR8q9UimyEIDL93qdUhvYY2LE-lrOU",
-        "chat_id": "141985333"
-    },
-    "api_server": {
-        "enabled": true,
-        "listen_ip_address": "127.0.0.1",
-        "listen_port": 8080,
-        "username": "user",
-        "password": "changeme"
-    },
-    "internals": {
-        "process_throttle_secs": 5
-    },
-    "strategy": "ichiV1",
-    "timeframe": "15m",
-    "tradable_balance_ratio": 0.99,
-    "fiat_display_currency": "USD",
-    "exit_pricing": {
-        "price_side": "ask",
-        "use_order_book": false,
-        "order_book_top": 1
-    },
-    "entry_pricing": {
-        "price_side": "bid",
-        "use_order_book": false,
-        "order_book_top": 1
-    },
-    "minimal_roi": {
-        "0": 0.05
-    },
-    "stoploss": -0.10
-} 
+    "pair_blacklist": []
+  },
+  "max_open_trades": 10,
+  "stake_currency": "USDT",
+  "stake_amount": "unlimited",
+  "timeframe": "15m",
+  "dataformat_ohlcv": "json",
+  "dry_run": true,
+  "use_exit_signal": true,
+  "exit_profit_only": false,
+  "ignore_roi_if_entry_signal": true,
+  "trailing_stop": false,
+  "trailing_stop_positive": null,
+  "trailing_stop_positive_offset": 0.0,
+  "trailing_only_offset_is_reached": false,
+  "roi": {
+    "0": 0.08,
+    "39": 0.037,
+    "70": 0.015,
+    "426": 0
+  },
+  "stoploss": -0.12,
+  "buy_params": {
+    "buy_min_fan_magnitude_gain": 1.0085,
+    "buy_trend_above_senkou_level": 6,
+    "buy_trend_bullish_level": 2
+  },
+  "sell_params": {
+    "sell_trend_indicator": "trend_close_5m"
+  }
+}
