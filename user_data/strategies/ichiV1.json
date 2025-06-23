@@ -1,34 +1,69 @@
 {
-  "strategy_name": "ichiV1",
-  "params": {
-    "trailing": {
-      "trailing_stop": false,
-      "trailing_stop_positive": null,
-      "trailing_stop_positive_offset": 0.0,
-      "trailing_only_offset_is_reached": false
-    },
-    "max_open_trades": {
-      "max_open_trades": 10
-    },
-    "buy": {
-      "buy_min_fan_magnitude_gain": 1.0085,
-      "buy_trend_above_senkou_level": 6,
-      "buy_trend_bullish_level": 2
-    },
-    "sell": {
-      "sell_trend_indicator": "trend_close_5m"
-    },
-    "protection": {},
-    "roi": {
-      "0": 0.07999999999999999,
-      "39": 0.037,
-      "70": 0.015,
-      "426": 0
-    },
-    "stoploss": {
-      "stoploss": -0.12
-    }
+  "strategy": "ichiV1",
+  "exchange": {
+    "name": "binance",
+    "ccxt_config": {},
+    "ccxt_async_config": {},
+    "pair_whitelist": [
+      "BTC/USDT",
+            "ETH/USDT",
+            "SOL/USDT",
+            "XRP/USDT",
+            "BNB/USDT",
+            "DOGE/USDT",
+            "PEPE/USDT",
+            "TRX/USDT",
+            "SUI/USDT",
+            "ADA/USDT",
+            "FUN/USDT",
+            "UNI/USDT",
+            "BCH/USDT",
+            "AAVE/USDT",
+            "LINK/USDT",
+            "ENA/USDT",
+            "AVAX/USDT",
+            "VIRTUAL/USDT",
+            "TRUMP/USDT",
+            "SEI/USDT",
+            "WIF/USDT",
+            "PAXG/USDT",
+            "TAO/USDT",
+            "WLD/USDT",
+            "LTC/USDT",
+            "NEAR/USDT",
+            "NEIRO/USDT",
+            "DOT/USDT",
+            "HBAR/USDT",
+            "WBTC/USDT"
+    ],
+    "pair_blacklist": []
   },
-  "ft_stratparam_v": 1,
-  "export_time": "2025-06-23 13:46:39.647703+00:00"
+  "max_open_trades": 10,
+  "stake_currency": "USDT",
+  "stake_amount": "unlimited",
+  "timeframe": "15m",
+  "dataformat_ohlcv": "json",
+  "dry_run": true,
+  "use_exit_signal": true,
+  "exit_profit_only": false,
+  "ignore_roi_if_entry_signal": true,
+  "trailing_stop": false,
+  "trailing_stop_positive": null,
+  "trailing_stop_positive_offset": 0.0,
+  "trailing_only_offset_is_reached": false,
+  "roi": {
+    "0": 0.08,
+    "39": 0.037,
+    "70": 0.015,
+    "426": 0
+  },
+  "stoploss": -0.12,
+  "buy_params": {
+    "buy_min_fan_magnitude_gain": 1.0085,
+    "buy_trend_above_senkou_level": 6,
+    "buy_trend_bullish_level": 2
+  },
+  "sell_params": {
+    "sell_trend_indicator": "trend_close_5m"
+  }
 }
