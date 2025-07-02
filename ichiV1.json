@@ -52,12 +52,12 @@
   "trailing_stop_positive_offset": 0.0,
   "trailing_only_offset_is_reached": false,
   "roi": {
-    "0": 0.08,
-    "39": 0.037,
-    "70": 0.015,
-    "426": 0
+    "0": 0.051,
+    "85": 0.036,
+    "231": 0.018,
+    "457": 0
   },
-  "stoploss": -0.12,
+  "stoploss": -0.147,
   "buy_params": {
      "buy_min_fan_magnitude_gain": 1.0013,
         "buy_trend_above_senkou_level": 6,
