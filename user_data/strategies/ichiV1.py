@@ -19,17 +19,17 @@ class ichiV1(IStrategy):
     # NOTE: settings as of the 25th july 21
     # Buy hyperspace params:
     buy_params = {
-        "buy_trend_above_senkou_level": 1,
-        "buy_trend_bullish_level": 6,
+        "buy_trend_above_senkou_level": 6,
+        "buy_trend_bullish_level": 3,
         "buy_fan_magnitude_shift_value": 3,
-        "buy_min_fan_magnitude_gain": 1.002 # NOTE: Good value (Win% ~70%), alot of trades
+        "buy_min_fan_magnitude_gain": 1.0013 # NOTE: Good value (Win% ~70%), alot of trades
         #"buy_min_fan_magnitude_gain": 1.008 # NOTE: Very save value (Win% ~90%), only the biggest moves 1.008,
     }
 
     # Sell hyperspace params:
     # NOTE: was 15m but kept bailing out in dryrun
     sell_params = {
-        "sell_trend_indicator": "trend_close_2h",
+        "sell_trend_indicator": "trend_close_6h",
     }
 
     # Hyperopt spaces
@@ -44,17 +44,17 @@ class ichiV1(IStrategy):
 
     # ROI table:
     minimal_roi = {
-        "0": 0.059,
-        "10": 0.037,
-        "41": 0.012,
-        "114": 0
+        "0": 0.051,
+        "85": 0.036,
+        "231": 0.018,
+        "457": 0
     }
 
     # Stoploss:
-    stoploss = -0.275
+    stoploss = -0.147
 
     # Optimal timeframe for the strategy
-    timeframe = '5m'
+    timeframe = '15m'
 
     startup_candle_count = 96
     process_only_new_candles = False
