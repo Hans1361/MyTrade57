@@ -48,7 +48,7 @@
   "exit_profit_only": false,
   "ignore_roi_if_entry_signal": true,
   "trailing_stop": false,
-  "trailing_stop_positive": null,
+  "trailing_stop_positive": 0.0,
   "trailing_stop_positive_offset": 0.0,
   "trailing_only_offset_is_reached": false,
   "roi": {
